@@ -18,7 +18,7 @@
 			box-sizing: border-box;
 			& > div
 			{
-					width: 100%!important;
+				width: 100%!important;
 			}
 		}
 
@@ -33,9 +33,39 @@
 			}
 		}
 
-		.tx-ginassposagallery-pi1 .thumbGallery
+		.tx-ginassposagallery-pi1
 		{
-			margin: 0px 10px;
+			.thumbGallery
+			{
+				margin: 0px 10px;
+
+			}
+
+			.modelView
+			{
+				.image
+				{
+					height: auto;
+					width: 100%;
+					.arrows
+					{
+						height:200px;
+						.previous, .next
+						{
+							padding-top:100px;
+							padding-bottom: 100px;
+						}
+					}
+				.imageLink 
+				{
+					img
+					{
+						width:100%;
+					}
+				}
+			}
+			}
 		}
+
 	}
 }
