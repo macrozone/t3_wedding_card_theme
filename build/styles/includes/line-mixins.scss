@@ -1,0 +1,11 @@
+@mixin line($position: bottom)
+{
+	 background-image: url('../images/line.png');
+  background-position: $position center;
+  background-repeat: no-repeat;
+
+  @include bp(mobile)
+  {
+  	background-repeat-x: repeat;
+  }
+}

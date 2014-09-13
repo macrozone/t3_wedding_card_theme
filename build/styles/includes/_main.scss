@@ -1,0 +1,444 @@
+*, td, th {
+  font-family: Archer Book, Georgia, Times, serif;
+  letter-spacing: 0.1em;
+}
+
+body {
+  background-color: #f0d9d1;
+  margin: 0px;
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'Archer Book';
+  src: url('../fonts/Archer-Book-Pro.eot');
+  src: local("☺"), url('../fonts/Archer-Book-Pro.woff') format("woff"), url('../fonts/Archer-Book-Pro.ttf') format("truetype"), url('../fonts/Archer-Book-Pro.svg') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'SnvExtCondD';
+  src: url('../fonts/SnvExtCondD-Reg.eot');
+  src: local("☺"), url('../fonts/SnvExtCondD-Reg.woff') format("woff"), url('../fonts/SnvExtCondD-Reg.ttf') format("truetype"), url('../fonts/SnvExtCondD-Reg.svg') format("svg");
+}
+
+
+p, dt, dd, li {
+  color: #471E25;
+  font-family: Archer Book, Georgia, Times, serif;
+}
+
+p {
+  text-align: justify;
+  line-height: 1.5em;
+  margin-top: 0px;
+  margin-bottom: 1em;
+  word-wrap: word-break;
+}
+
+a {
+  cursor: pointer;
+  color: #471E25;
+  &:hover, &:active {
+    color: #958a7b;
+  }
+}
+
+.active {
+  color: #958a7b;
+  a {
+    color: #958a7b;
+  }
+}
+
+.ui-tabs-selected a, .ui-state-active a {
+  color: #958a7b;
+}
+
+img {
+  border: none;
+}
+
+h1, h2, h3, h4 {
+  font-family: SnvExtCondD, Georgia, Times, serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0px;
+  color: #471E25;
+}
+
+h1 {
+  a {
+    font-family: SnvExtCondD, Georgia, Times, serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0px;
+    color: #471E25;
+  }
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+h1 {
+  background-image: url(../images/diagonal.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  padding-bottom: 40px;
+}
+
+div.csc-textpic div.csc-textpic-single-image img {
+  margin-bottom: 0px;
+}
+
+h3, h4 {
+  text-align: center;
+  font-family: Archer Book, Georgia, Times, serif;
+  font-size: 16px;
+  padding: 2px 0px;
+  font-variant: small-caps;
+  text-transform: none;
+}
+
+h3 {
+  border-top: 1px solid hsl(350, 18%, 36%);
+  border-bottom: 1px solid hsl(350, 18%, 36%);
+}
+
+h4 {
+  margin-bottom: 0px;
+}
+
+.titleWithBorders! {}
+
+.align-center {
+  text-align: center;
+}
+
+#page {
+  margin: 0px auto;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  @include full-width;
+  box-sizing: border-box;
+}
+
+#logo {
+  margin-top: 3px;
+}
+
+/** NAVIGATION **/
+
+#navigation {
+
+padding-left: 10px;
+padding-right: 10px;
+   font-size: 14px;
+ @include bp(mobile)
+ {
+ 	 font-size: 18px;
+ 	 max-width: 640px;
+ 	 margin: 0 auto;
+ }
+  font-family: Archer Book, Georgia, Times, serif;
+  text-align: left;
+  overflow: hidden;
+  .column {
+  	&:first-child
+  	{
+  		width: 44%;
+  		
+  		 @include bp(mobile)
+    {
+    	width: 100% !important;
+    	margin-bottom: 10px;
+    }
+  	}
+    width: 28%;
+    @include bp(mobile)
+    {
+
+    	width: 50% !important;
+    	
+    }
+
+    
+    box-sizing: border-box;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    li {
+      list-style-type: none;
+      a {
+        text-decoration: none;
+        display: block;
+        padding-bottom: 5px;
+        &:hover {
+          /*text-decoration: underline;*/
+        }
+      }
+    }
+  }
+}
+
+#headerLeft, #headerRight, #contentLeft, #contentRight, #footerLeft, #footerRight {
+  float: left;
+  @include card-width;
+}
+
+#contentLeft a, #contentRight a {
+  text-decoration: none;
+  border-bottom: 1px solid;
+  padding-bottom: 1px;
+}
+
+#headerLeft, #contentLeft, #footerLeft {
+  margin-left: 0px;
+  margin-right: 15px;
+  	@include bp(mobile)
+  {
+  	margin-right: 0px;
+  }
+  
+}
+
+#headerRight, #contentRight, #footerRight {
+  margin-right: 0px;
+  margin-left: 15px;
+  
+  @include bp(mobile)
+  {
+  	margin-left: 0px;
+  }
+  
+}
+
+#header, #content, #footer, .clear {
+  clear: left;
+  overflow: hidden;
+}
+
+
+
+#headerLeft, #headerRight {
+ @include line(bottom);
+ height: 130px;
+  @include bp(mobile)
+  {
+  	height: auto;
+  	padding-top: 10px;
+  	padding-bottom: 10px;
+  }
+}
+
+#headerLeft {
+  text-align: center;
+
+}
+
+#contentLeft, #contentRight {
+  padding: 45px;
+  font-size: 16px;
+
+  @include bp(mobile)
+  {
+  	padding: 25px;
+  }
+}
+
+#footer {
+
+  font-family: Archer Book, Georgia, Times, serif;
+}
+
+#footerLeft, #footerRight {
+ @include line(top);
+
+  padding-left: 45px;
+  padding-right: 0px;
+  padding-top: 10px;
+  font-size: 12px;
+  box-sizing: border-box;
+  @include card-width;
+  @include bp(mobile){
+
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	font-size: 16px;
+  }
+}
+
+#footerLeft p {
+
+  margin: 0px;
+  span {
+    margin-right: 15px;
+    &.last {
+      margin-right: 0px;
+    }
+  }
+
+  @include bp(mobile)
+  {
+  	text-align: center;
+  }
+}
+
+#footerRight {
+  float: left;
+  a {
+    text-decoration: none;
+    margin-right: 65px;
+  }
+  img {
+    margin-right: 15px;
+    vertical-align: middle;
+  }
+  span {
+    vertical-align: middle;
+  }
+
+  @include bp(mobile)
+  {
+  	background-image: none;
+  	a
+  	{
+  		margin-right: 0px;
+     display: block;
+  	}
+  }
+}
+
+.collectionName {
+  font-variant: small-caps;
+}
+
+#fancybox-outer, #fancybox-frame {
+  background-color: #f0d9d1 !important;
+}
+
+#fancybox-content {
+  border-color: #f0d9d1 !important;
+  background-color: #f0d9d1;
+  .closeButton {
+    border-top: 1px solid #6C4B51;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #6C4B51;
+    padding-top: 10px;
+    display: block;
+    margin: 20px auto;
+    margin-top: 6px;
+    width: 680px;
+    img {
+      margin-bottom: 2px;
+    }
+  }
+}
+
+#fancybox-wrap {
+  position: absolute;
+  top: 0px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  height: 100% !important;
+}
+
+#fancybox-bg-w {
+  left: -10px;
+  width: 10px;
+}
+
+#fancybox-bg-e {
+  right: -10px;
+}
+
+#fancybox-bg-se, #fancybox-bg-sw {
+  display: none;
+}
+
+.tx-ginassposagallery-pi2 {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th {
+    color: #471E25;
+    font-family: Archer Book, Georgia, Times, serif;
+    font-size: 16px;
+    padding: 2px 0px;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: normal;
+    border-top: 1px solid hsl(350, 18%, 36%);
+    border-bottom: 1px solid hsl(350, 18%, 36%);
+  }
+  td {
+    border-right: 1px solid hsl(350, 18%, 36%);
+    border-bottom: 1px solid hsl(350, 18%, 36%);
+    &.last {
+      border-right: none;
+    }
+  }
+  a {
+    border-bottom: none !important;
+  }
+  img {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+}
+
+/* map */
+
+#Tx_AdGoogleMaps_Canvas_Uid_2 .bodytext {
+  font-size: 12px;
+  text-align: left;
+}
+
+/* Mail Formular */
+
+.csc-mailform {
+  text-align: left;
+  border: none;
+  max-width: 480px;
+  margin: 0 auto;;
+  .csc-mailform-field
+  {
+    margin-bottom: 10px;
+    label, input
+    {
+      font-size: 16px;
+    }
+  label {
+    color: #471E25;
+    width: 110px;
+    float: left;
+  }
+  input {
+    clear: left;
+    width: 264px;
+  }
+  textarea {
+    max-width: 350px;
+    height: 180px;
+  }
+  .csc-mailform-submit
+  {
+    float: right;
+  }
+}
+}
+
+#Tx_AdGoogleMaps_Canvas_Uid_2
+{
+  margin: 0 auto;
+}

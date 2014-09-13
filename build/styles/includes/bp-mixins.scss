@@ -1,0 +1,31 @@
+/*
+
+This mixin defines a media query-breakpoint.
+
+usage: 
+
+@include bp(mobile)
+{
+	// my styles that should only be applied on mobile-sizes
+	width: $width-mobile;
+}
+*/
+
+$bp-mobile: 1023px;
+
+@mixin bp($point) {
+
+	// currently, we have no mobile-layout. We threat mobile and tablets the same way 
+
+	// $mq-mobile: "(max-width: #{$bp-mobile})";
+	// $mq-wide: "(min-width: #{$bp-wide})";
+	$mq-mobile: "(max-width: #{$bp-mobile})";
+
+
+
+	@if $point == mobile {
+		@media #{$mq-mobile} { @content; }
+	}
+
+
+}

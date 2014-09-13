@@ -1,0 +1,41 @@
+
+
+#fancybox-wrap{
+
+	@include bp(mobile)
+	{
+		.tx-ginassposagallery-pi1 .navigation
+		{
+			font-size: 16px;
+		}
+		width:100% !important;
+		left: 0px !important;
+		padding-left: 0px !important;
+
+		#fancybox-content
+		{
+			width: 100%!important;
+			box-sizing: border-box;
+			& > div
+			{
+					width: 100%!important;
+			}
+		}
+
+		.tx-ginassposagallery-pi1 .ajaxTabs ul
+		{
+			padding: 6px 10px;
+			
+			height: auto;
+			.breakSpan
+			{
+				display: none;
+			}
+		}
+
+		.tx-ginassposagallery-pi1 .thumbGallery
+		{
+			margin: 0px 10px;
+		}
+	}
+}

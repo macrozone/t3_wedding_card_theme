@@ -75,14 +75,8 @@ page{
 	
 	# javascripts
 	includeJS {
-		file10 = fileadmin/templates/card_layout/js/jquery.js
-		file20 = fileadmin/templates/card_layout/js/jquery-ui-1.8.16.custom.min.js
-		file25 = fileadmin/templates/card_layout/js/jquery.scrollTo-min.js
-		file30 = fileadmin/templates/card_layout/js/jquery.ba-bbq.min.js
-		file39 = fileadmin/templates/card_layout/js/teaser.js
-		file40 = fileadmin/templates/card_layout/js/jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.pack.js
-		file50 = fileadmin/templates/card_layout/js/jquery.fancybox-1.3.4/fancybox/jquery.easing-1.3.pack.js
-		file60 = fileadmin/templates/card_layout/js/init.js
+		file10 = fileadmin/templates/card_layout/js/scripts.js
+		
 		
 		
 	}

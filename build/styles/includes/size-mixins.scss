@@ -1,0 +1,50 @@
+/*
+
+This mixins define common sizes, i.e. widths, margins, ...
+
+These sizes can be responsive, see the implementation below
+
+usage: 
+
+@include full-width;
+
+
+*/
+
+@import 'bp-mixins';
+$fullWidth: 980px;
+
+
+
+
+
+
+@mixin full-width{
+
+	width: $fullWidth;
+	@include bp(mobile)
+	{
+		width: 100%;
+	}
+}
+
+
+@mixin card-width{
+
+
+	width: 475px;
+	box-sizing: border-box;
+
+	@include bp(mobile)
+	{
+		width: 100%;
+		
+		
+	}
+}
+
+
+@mixin header-height
+{
+	height: 140px;
+}
