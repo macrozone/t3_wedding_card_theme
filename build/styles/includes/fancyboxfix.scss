@@ -43,6 +43,8 @@
 
 			.modelView
 			{
+				margin-left: 0px;
+				margin-right: 0px;
 				.image
 				{
 					height: auto;
@@ -54,6 +56,15 @@
 						{
 							padding-top:100px;
 							padding-bottom: 100px;
+						}
+						.previous
+						{
+							padding-right:50%;
+						}
+
+						.next
+						{
+							padding-right:50%;
 						}
 					}
 				.imageLink 

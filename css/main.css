@@ -1154,21 +1154,34 @@ h4 {
   #fancybox-wrap .tx-ginassposagallery-pi1 .thumbGallery {
     margin: 0px 10px;
   }
-  /* line 46, ../build/styles/includes/fancyboxfix.scss */
+  /* line 44, ../build/styles/includes/fancyboxfix.scss */
+  #fancybox-wrap .tx-ginassposagallery-pi1 .modelView {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  /* line 48, ../build/styles/includes/fancyboxfix.scss */
   #fancybox-wrap .tx-ginassposagallery-pi1 .modelView .image {
     height: auto;
     width: 100%;
   }
-  /* line 50, ../build/styles/includes/fancyboxfix.scss */
+  /* line 52, ../build/styles/includes/fancyboxfix.scss */
   #fancybox-wrap .tx-ginassposagallery-pi1 .modelView .image .arrows {
     height: 200px;
   }
-  /* line 53, ../build/styles/includes/fancyboxfix.scss */
+  /* line 55, ../build/styles/includes/fancyboxfix.scss */
   #fancybox-wrap .tx-ginassposagallery-pi1 .modelView .image .arrows .previous, #fancybox-wrap .tx-ginassposagallery-pi1 .modelView .image .arrows .next {
     padding-top: 100px;
     padding-bottom: 100px;
   }
-  /* line 61, ../build/styles/includes/fancyboxfix.scss */
+  /* line 60, ../build/styles/includes/fancyboxfix.scss */
+  #fancybox-wrap .tx-ginassposagallery-pi1 .modelView .image .arrows .previous {
+    padding-right: 50%;
+  }
+  /* line 65, ../build/styles/includes/fancyboxfix.scss */
+  #fancybox-wrap .tx-ginassposagallery-pi1 .modelView .image .arrows .next {
+    padding-right: 50%;
+  }
+  /* line 72, ../build/styles/includes/fancyboxfix.scss */
   #fancybox-wrap .tx-ginassposagallery-pi1 .modelView .image .imageLink img {
     width: 100%;
   }
