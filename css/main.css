@@ -1179,7 +1179,7 @@ h4 {
   }
   /* line 65, ../build/styles/includes/fancyboxfix.scss */
   #fancybox-wrap .tx-ginassposagallery-pi1 .modelView .image .arrows .next {
-    padding-right: 50%;
+    padding-left: 50%;
   }
   /* line 72, ../build/styles/includes/fancyboxfix.scss */
   #fancybox-wrap .tx-ginassposagallery-pi1 .modelView .image .imageLink img {
