@@ -1,0 +1,337 @@
+
+<!-- ###JS### begin -->
+<script type="text/javascript" >
+
+$(document).ready(function()
+	{
+
+		var options = {
+			selected: ###SELECTED###,
+			cache: true,
+			show: function()
+			{
+				
+				if($("####ID###").children(".ui-tabs").tabs('option', 'selected') == -1)
+					{
+						$(this).children('.teaser').show();
+					}
+					else
+					{
+						$(this).children('.teaser').hide();	
+					}
+				
+				//console.log(selectedTab);
+				$( '.ajaxTabs li a' ).each(function()
+					{
+						
+						$(this).attr("href", "#"+$(this).attr("title"));
+						
+					}
+					);
+			}
+			
+		};
+		$('####ID###').tabs(options);
+		
+		
+		if($('####ID###').tabs('option', 'selected') == -1)
+		{
+		$('####ID###').children('.teaser').show();	
+		}
+		else
+		{
+		$('####ID###').children('.teaser').hide();	
+		}
+		
+		$( '####ID### li a' ).click(function(event, ui) {
+				
+					$('####ID###').children('.teaser').hide();	
+			});
+		
+	}
+	);
+	</script>
+	<!-- ###JS### end -->
+	
+	
+	
+	<!-- ###COLLECTION_NAV### -->
+	<script type="text/javascript" >
+	
+	$(document).ready(function()
+		{	
+				
+			$( '####ID### li a' ).click(function(event, ui) {
+					
+					window.location.hash = "#"+$(this).attr("title");
+					
+					
+				
+			});
+			
+			$( '####ID### .teaser a').each(function()
+				{
+					$(this).attr("href", "#"+$(this).attr("title"));
+					$(this).click(function()
+						{
+						
+							$( '####ID### li a[title="'+$(this).attr("title")+'"]').trigger("click");
+						
+							return false;
+						});
+				}
+				);
+			
+			
+		});
+		</script>
+		<div class="logo">
+		<img src="fileadmin/templates/card_layout/images/logo.png" alt="Gina's Sposa Logo" />
+		</div>
+		<div id="###ID###" class="ajaxTabs">
+		<ul class="first navigation">
+		<!-- ###COLLECTIONS### -->
+		<!-- ###ONE_COLLECTION### begin -->
+		<li ><!--###LINK_ITEM###-->###TITLE###<!--###LINK_ITEM###--></li>
+		
+		<!-- ###ONE_COLLECTION### end -->
+		
+		<!-- ###COLLECTIONS### -->
+		<span class="breakSpan"><!----></span>
+		
+		</ul>
+		<div class="teaser">
+		<h4>###TITLE###</h4>
+		<div class="thumbGallery">
+		<!-- ###TEASER### -->
+	
+		<!--###LINK_ITEM###-->###IMAGE###<p class="title">###TITLE###</p><!--###LINK_ITEM###-->
+		###BREAKSPAN###
+	
+		
+		<!-- ###TEASER### -->
+		</div>
+		</div>
+		<div class="clear"></div>
+		
+		</div>
+		
+		<!-- ###COLLECTION_NAV### -->
+		
+		
+		
+		
+		
+		<!-- ###SUBCOLLECTION_NAV### -->
+		<script type="text/javascript" >
+		$(document).ready(function()
+			{	
+				
+				$( '####ID### li a' ).click(function(event, ui) {
+						
+						window.location.hash = "#"+$(this).attr("title");
+						
+				});
+				
+				$( '####ID### .teaser a').each(function()
+				{
+					$(this).attr("href", "#"+$(this).attr("title"));
+					$(this).click(function()
+						{
+						
+							$( '####ID### li a[title="'+$(this).attr("title")+'"]').trigger("click");
+							return false;
+						});
+				}
+				);
+				
+			
+			});
+			</script>
+			<div id="###ID###" class="ajaxTabs">
+			<ul class="navigation">
+			<!-- ###SUBCOLLECTIONS### -->
+			<!-- ###ONE_SUBCOLLECTION### begin -->
+			<li ><!--###LINK_ITEM###-->###TITLE###<!--###LINK_ITEM###--></li>
+			
+			<!-- ###ONE_SUBCOLLECTION### end -->
+			
+			<!-- ###SUBCOLLECTIONS### -->
+			<span class="breakSpan"><!----></span>
+			</ul>
+			
+			<div class="teaser">
+			<h4>###TITLE###</h4>
+			<div class="thumbGallery">
+			<!-- ###TEASER### -->
+			<!-- ###ONE_COLLECTION### begin -->
+			<!--###LINK_ITEM###-->###IMAGE###<p class="title">###TITLE###</p><!--###LINK_ITEM###-->
+			###BREAKSPAN###
+			<!-- ###ONE_COLLECTION### end -->
+		
+			<!-- ###TEASER### -->
+			</div>
+			</div>
+			<div class="clear"></div>
+			
+			</div>
+			
+			
+			<!-- ###SUBCOLLECTION_NAV###  end -->
+			
+			
+			
+			
+			<!-- ###THUMB_GALLERY### begin -->
+			<div class="collectionView">
+			<h4>###TITLE###</h4>
+			<div class="thumbGallery">
+			<!-- ###THUMBS### begin -->
+			<!-- ###ITEM### begin -->
+			<!-- ###LINK### -->###IMAGE###<!-- ###LINK### -->
+					###BREAKSPAN###
+			<!-- ###ITEM### end -->
+	
+			
+			<!-- ###THUMBS### end -->
+			</div>
+			<div class="clear"></div>
+			</div>
+			
+			<div style="display: none;" class="modelView"></div>
+			<script type="text/javascript" >
+			$(document).ready(function()
+				{	
+					
+					$( ".ajaxTabs li a" ).click(function(event, ui) {
+							$(".tx-ginassposagallery-pi1 .modelView").hide();
+							$(".tx-ginassposagallery-pi1 .thumbGallery").show();
+							
+							
+					});
+					
+					function initLink()
+					{
+						if($(this).attr("href") !=  "#"+$(this).attr("title"))
+						{
+							var url = $(this).attr("href");
+							$(this).attr("href", "#"+$(this).attr("title"));
+							$(this).unbind("click");
+							$(this).click(function()
+								{
+									
+									window.location.hash = "#"+$(this).attr("title");
+									
+									
+									
+									$(".tx-ginassposagallery-pi1 .thumbGallery").hide();
+									var $modelView = $(this).parentsUntil(".ui-tabs-panel").parent().find(".modelView");
+									
+									
+									$modelView.load(url, function()
+										{
+										  
+											$modelView.show();
+											$modelView.find(".modelNavigation .pageIndicators a").each(initLink);
+											$modelView.find(".previous").click(showPrevious);
+											$modelView.find(".next").click(showNext);
+											$modelView.find(".imageLink").click(showNext);
+											$modelView.find(".facebookButton").attr("share_url", "http://www.ginas-sposa.ch/"+window.location.hash);
+											$.scrollTo($("#ajaxTab_main"),200,{offset:1});
+											});
+									
+									return false;
+									
+								});
+						}
+					}
+					$(".tx-ginassposagallery-pi1 .thumbGallery a").each(initLink);
+					
+					function showPrevious()
+					{
+						if($(".tx-ginassposagallery-pi1 .modelView").is(":visible"))
+						{
+							var $prev = $(".tx-ginassposagallery-pi1 .pageIndicators a.active:visible").prev();
+							if($prev[0])
+								$($prev[0]).trigger("click");
+							else
+								
+								$(".tx-ginassposagallery-pi1 .pageIndicators:visible a:last").trigger("click");
+						}
+					}
+					function showNext()
+					{
+						if($(".tx-ginassposagallery-pi1 .modelView").is(":visible"))
+						{
+							var $next = $(".tx-ginassposagallery-pi1 .pageIndicators a.active:visible").next();
+							if($next[0])
+								$($next[0]).trigger("click");
+							else
+								$(".tx-ginassposagallery-pi1 .pageIndicators:visible a:first").trigger("click");
+							
+						}
+					}
+					$(window).unbind("keydown");
+					
+					$(window).keydown(function(event){
+							switch (event.keyCode) {
+							case 37:
+								// left
+								showPrevious();
+								break;
+							case 39:
+								// right
+								showNext();
+								break;
+							default:
+								break;
+							}	
+					});
+					
+					var selected = ###SELECTED###;
+				
+					if(selected > -1)
+					{
+				
+						$(".tx-ginassposagallery-pi1 .thumbGallery a").eq(selected).trigger("click");
+					}
+					
+				}
+				);
+			
+			
+			
+				</script>
+				<!-- ###THUMB_GALLERY### end -->
+				
+				
+				
+				
+				<!-- ###MODEL_VIEW### begin -->
+				
+				<div class="image">
+				<a class="imageLink">###IMAGE###</a>
+				<p class="modelName">###NAME###</p>
+				<table class="arrows"><tr><td><a class="previous"></a></td><td>
+				<a class="next"></a></td></table>
+				</div>
+				
+				<div class="modelNavigation">
+				
+				<table><tr><!--<td class="arrows"><a class="previous"><img src="fileadmin/templates/card_layout/images/arrow_left.png"/></a>
+				<a class="next"><img src="fileadmin/templates/card_layout/images/arrow_right.png"/></a></td>-->
+				<td class="pageIndicators">
+				<!-- ###INDICATORS### begin -->
+				<!-- ###ITEM### begin -->
+				<!-- ###LINK### -->###COUNTER###<!-- ###LINK### -->
+				<!-- ###ITEM### end -->
+				<!-- ###INDICATORS### end -->
+				</td></tr></table>
+				
+				
+				</div>
+				
+				
+				
+				
+				<!-- ###MODEL_VIEW### end -->

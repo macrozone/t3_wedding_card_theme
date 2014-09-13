@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>News example template</title>
+</head>
+
+<body>
+
+<h1>NEWS TEMPLATES</h1>
+<h2>EXAMPLE</h2>
+
+
+
+
+
+
+<br />
+<br />
+<br />
+<pre>
+<strong>Global markers, as set up in TypoScript:</strong>
+These are substituted throughout the whole template.
+
+<em>Markers:</em>
+GW1B / GW1E - wrap for news headers in single view
+GW2B / GW2E - wrap for more-links and the pagebrowser
+GW3B / GW3E - wrap for headers in latest and amenu templates
+
+GC1 - first alternating color
+GC2 - second alternating color
+GC3 - color for headers in latest and amenu templates
+GC4 - bgcolor for items in list view
+
+
+<strong>Common markers:</strong>
+These are substituted in all news item displaying templates:
+
+<em>Markers:</em>
+NEWS_UID - ID number (uid) of the news item
+NEWS_TITLE - News item title
+NEWS_AUTHOR - name of author
+NEWS_EMAIL - email of author
+NEWS_DATE - date
+NEWS_TIME - time
+NEWS_AGE - age of news item in minutes, hours, days or years
+NEWS_SUBHEADER - subheader, if empty main content is inserted here in LIST and LATEST
+NEWS_CONTENT - main content
+NEWS_LINKS - news links
+NEWS_CATEGORY - news item category
+NEWS_CATEGORY_IMAGE - news item category image
+NEWS_RELATED - links to related news
+NEWS_IMAGE - news item images
+NEWS_CATEGORY_ROOTLINE - the category rootline
+
+PAGE_UID - Page id of the parent page (pid)
+PAGE_TITLE - Title of the parent page of the news item
+PAGE_AUTHOR - Page author, if any
+PAGE_AUTHOR_EMAIL - Page author email, if any
+
+<em>News Language Markers (see pi/locallang.php):</em>
+LATEST_HEADER - header for the LATEST element
+GOTOARCHIVE - link to archive page in latest template
+ARCHIVE_HEADER - same for AMENU
+MORE - more ;-)
+TEXT_CAT - text output before categories and category images in LIST view (eg: 'categories:')
+TEXT_CAT_LATEST - the same in a shorter form for the LATEST element (eg: 'cat:')
+BACK_TO_LIST - link back to list-view in single-view template
+ARCHIVE_EMPTY_MSG - no items in archive
+SEARCH_EMPTY_MSG - message for empty search results
+TEXT_NEWS_AGE - text inserted before the age of the news item 
+
+
+<em>Wrapped Subparts:</em>
+LINK_ITEM - link to the news item single display
+LINK_PREV - used in the pagebrowser
+BROWSE_LINKS
+LINK_NEXT
+</pre>
+
+
+<br /><br /><br /><br /><hr />
+<br />
+<h3>TEMPLATE_LATEST</h3>
+<em>This is the template for the latest news, typically displayed on a frontpage.</em>
+<br />
+<br />
+<br />
+<br />
+
+
+<!-- ###TEMPLATE_LATEST### begin
+	This is the template for the latest news, typically displayed on a frontpage 
+-->
+<div class="newsDetailView">
+
+
+<!-- ###CONTENT### begin
+		  This is the part of the template substituted with the list of news: 
+	-->
+		<!-- ###NEWS### begin 
+			Template for a single item 
+		-->
+		###CURNEWSWRAP###
+			
+				
+				
+				<h3>###NEWS_TITLE###</h3>
+				
+				<div class="subheader">###NEWS_SUBHEADER###</div> 
+				<div class="content">
+				###NEWS_CONTENT###
+				</div>
+				
+		
+			###CURNEWSWRAPEND###
+		<!-- ###NEWS### end-->
+	
+
+	<!-- ###CONTENT###  end -->
+
+</div>
+
+<!-- ###TEMPLATE_LATEST### end -->
+</body>
+</html>
