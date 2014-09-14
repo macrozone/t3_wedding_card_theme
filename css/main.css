@@ -784,6 +784,23 @@ h4 {
 }
 
 /* line 441, ../build/styles/includes/_main.scss */
+.csc-textpic-imagewrap {
+  max-width: 100%;
+}
+/* line 444, ../build/styles/includes/_main.scss */
+.csc-textpic-imagewrap .csc-textpic-imagerow {
+  max-width: 100%;
+}
+/* line 447, ../build/styles/includes/_main.scss */
+.csc-textpic-imagewrap .csc-textpic-imagerow .csc-textpic-image {
+  max-width: 100%;
+}
+/* line 451, ../build/styles/includes/_main.scss */
+.csc-textpic-imagewrap .csc-textpic-imagerow .csc-textpic-image img {
+  max-width: 100%;
+}
+
+/* line 459, ../build/styles/includes/_main.scss */
 #Tx_AdGoogleMaps_Canvas_Uid_2 {
   margin: 0 auto;
 }

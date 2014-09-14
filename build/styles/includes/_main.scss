@@ -438,6 +438,24 @@ padding-right: 10px;
 }
 }
 
+.csc-textpic-imagewrap
+{
+        max-width:100%;
+  .csc-textpic-imagerow
+  {
+        max-width:100%;
+    .csc-textpic-image
+    {
+    
+        max-width:100%;
+      img
+      {
+        max-width:100%;
+      }
+    }
+  }
+}
+
 #Tx_AdGoogleMaps_Canvas_Uid_2
 {
   margin: 0 auto;
