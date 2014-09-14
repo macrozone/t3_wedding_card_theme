@@ -48,7 +48,7 @@ gulp.task "scripts", ->
 	.pipe watch()
 	.pipe gulpif /[.]coffee$/, coffee().on "error", onError
 	.pipe concat "scripts.js"
-	#.pipe uglify()
+	.pipe uglify()
 	.pipe gulp.dest paths.out.javascript
 	.pipe livereload()
 	.on "error", onError
