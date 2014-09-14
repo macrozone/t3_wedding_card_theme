@@ -804,6 +804,7 @@ h4 {
 /* line 460, ../build/styles/includes/_main.scss */
 #Tx_AdGoogleMaps_Canvas_Uid_2 {
   margin: 0 auto;
+  max-width: 100%;
 }
 
 /* line 3, ../build/styles/includes/_gallery.scss */
